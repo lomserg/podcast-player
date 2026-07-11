@@ -1,8 +1,10 @@
 import "./style.css";
-const app = document.querySelector<HTMLDivElement>("#app");
+import { App } from "./app/App";
 
-if (!app) {
+const root = document.querySelector<HTMLElement>("#app");
+
+if (!root) {
   throw new Error("App root not found");
 }
 
-app.textContent = "Podcast Player";
+new App().mount(root);
