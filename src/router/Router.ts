@@ -30,8 +30,8 @@ export class Router {
 
     const page = new route.page();
 
-    await page.init();
-
     this.main.setContent(page.getElement());
+
+    await page.init();
   }
 }
