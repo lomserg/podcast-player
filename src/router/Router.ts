@@ -21,7 +21,7 @@ export class Router {
     this.render(path);
   }
 
-  private render(path: string): void {
+  private async render(path: string): Promise<void> {
     const route = routes.find((route) => route.path === path);
 
     if (!route) {
@@ -29,6 +29,8 @@ export class Router {
     }
 
     const page = new route.page();
+
+    await page.init();
 
     this.main.setContent(page.getElement());
   }

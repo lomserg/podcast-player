@@ -1,8 +1,8 @@
-import { BaseComponent } from "../components/base/BaseComponent";
+import { BasePage } from "./BasePage";
 
-export class PlaylistPage extends BaseComponent<"section"> {
+export class PlaylistPage extends BasePage {
   constructor() {
-    super("section", ["playlist-page"]);
+    super("playlist-page");
 
     const title = document.createElement("h2");
     title.textContent = "Playlist Page";
