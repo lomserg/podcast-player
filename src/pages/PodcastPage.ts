@@ -47,8 +47,6 @@ export class PodcastPage extends BasePage {
       return;
     }
 
-    const audio = new Audio();
-
     const podcast = await this.podcastService.getPodcast(id);
 
     const episodesTitle = document.createElement("h3");
